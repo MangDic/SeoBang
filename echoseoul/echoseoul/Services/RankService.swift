@@ -114,7 +114,11 @@ class RankService {
             "distance": user.distance,
             "steps": user.steps
         ]
-        db.child("users").child(key).setValue(userData) { (error, _) in
+        db.child("users").child(key).setValue(userData) { [weak self] (error, _) in
+            guard let `self` = self else { return }
+            if error == nil {
+                self.loadData()
+            }
             completion(error)
         }
     }

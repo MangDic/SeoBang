@@ -187,7 +187,7 @@ class SetupViewController: UIViewController {
             }
             else {
                 self.navigationController?.popViewController(animated: false)
-                self.navigationController?.pushViewController(HomeViewControllerController(), animated: false)
+                self.navigationController?.pushViewController(MainTabBarController(), animated: false)
             }
         })
     }
