@@ -1,0 +1,2 @@
+NMapsMap/framework filter=lfs diff=lfs merge=lfs -text
+NMapsMap/framework/NMapsMap.xcframework/ios-arm64_armv7/NMapsMap.framework/NMapsMap filter=lfs diff=lfs merge=lfs -text

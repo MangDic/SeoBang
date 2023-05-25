@@ -1,0 +1,6 @@
+framework module Pods_echoseoulTests {
+  umbrella header "Pods-echoseoulTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
