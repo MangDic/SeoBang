@@ -815,6 +815,7 @@
 				DEVELOPMENT_TEAM = BPGXX3JG6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "echoseoul/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "서울 방방곡곡";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -846,6 +847,7 @@
 				DEVELOPMENT_TEAM = BPGXX3JG6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "echoseoul/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "서울 방방곡곡";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
