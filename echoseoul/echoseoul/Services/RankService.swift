@@ -158,4 +158,32 @@ class RankService {
     private func setupIndividualData(arr: [Rank]) {
         individualArr = arr.sorted(by: { $0.getScore() > $1.getScore() })
     }
+    
+    func updateMyData(completion: @escaping (Error?) -> Void ) {
+        let nickName = UserInfoService.shared.userNickName
+        let region = UserInfoService.shared.region
+        let steps = HealthService.shared.stepsRelay.value
+        let distance = HealthService.shared.distanceRelay.value
+        let calories = HealthService.shared.caloriesRelay.value
+        let clearCount = UserInfoService.shared.clearCount
+        let uuid = UserInfoService.shared.uuid
+        
+        let userData = Rank(nickName: nickName,
+                            steps: steps,
+                            distance: distance,
+                            calories: calories,
+                            clearCount: clearCount,
+                            region: region,
+                            uuid: uuid)
+        
+        RankService.shared.uploadData(user: userData, completion: { error in
+            if let error = error {
+                completion(error)
+            }
+            else {
+                RankService.shared.loadData()
+                completion(nil)
+            }
+        })
+    }
 }

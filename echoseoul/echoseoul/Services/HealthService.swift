@@ -135,8 +135,10 @@ class HealthService {
         }
         
         let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        var dateComponents = DateComponents()
+        dateComponents.month = -1
+        let startOfMonth = Calendar.current.date(byAdding: dateComponents, to: now)!
+        let predicate = HKQuery.predicateForSamples(withStart: startOfMonth, end: now, options: .strictStartDate)
         
         let query = HKStatisticsQuery(quantityType: stepsQuantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
             var resultCount = 0
@@ -152,7 +154,7 @@ class HealthService {
         
         healthStore.execute(query)
     }
-    
+
     private func fetchDistance(completion: @escaping (Double) -> Void) {
         guard let distanceType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning) else {
             completion(0)
@@ -160,8 +162,10 @@ class HealthService {
         }
         
         let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        var dateComponents = DateComponents()
+        dateComponents.month = -1
+        let startOfMonth = Calendar.current.date(byAdding: dateComponents, to: now)!
+        let predicate = HKQuery.predicateForSamples(withStart: startOfMonth, end: now, options: .strictStartDate)
         
         let query = HKStatisticsQuery(quantityType: distanceType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
             var resultValue = 0.0
@@ -177,7 +181,7 @@ class HealthService {
         
         healthStore.execute(query)
     }
-    
+
     private func fetchCalories(completion: @escaping (Double) -> Void) {
         guard let caloriesType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
             completion(0)
@@ -185,8 +189,10 @@ class HealthService {
         }
         
         let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        var dateComponents = DateComponents()
+        dateComponents.month = -1
+        let startOfMonth = Calendar.current.date(byAdding: dateComponents, to: now)!
+        let predicate = HKQuery.predicateForSamples(withStart: startOfMonth, end: now, options: .strictStartDate)
         
         let query = HKStatisticsQuery(quantityType: caloriesType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
             var resultValue = 0.0
@@ -201,5 +207,4 @@ class HealthService {
         
         healthStore.execute(query)
     }
-
 }

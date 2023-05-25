@@ -39,7 +39,7 @@ class MapViewController: UIViewController {
         $0.numberOfLines = 2
         $0.font = UIFont(name: "Cafe24Ohsquare", size: 11)
         $0.textAlignment = .center
-        $0.text = "오늘의 이동거리\n0m"
+        $0.text = "누적 이동거리\n0m"
         $0.layer.cornerRadius = 6
         $0.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
         $0.textColor = #colorLiteral(red: 0.9693942666, green: 0.9693942666, blue: 0.9693942666, alpha: 1)
@@ -251,7 +251,7 @@ class MapViewController: UIViewController {
         HealthService.shared.distanceRelay.subscribe(onNext: { [weak self] distance in
             guard let `self` = self else { return }
             DispatchQueue.main.async {
-                self.distanceLabel.text = "오늘의 이동거리\n\(Int(distance))m"
+                self.distanceLabel.text = "이달의 이동거리\n\(Int(distance))m"
             }
         }).disposed(by: disposeBag)
         

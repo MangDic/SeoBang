@@ -166,21 +166,7 @@ class SetupViewController: UIViewController {
         UserInfoService.shared.updateUserInfo(userNickName: nickName,
                                               region: selectedRegion)
         
-        let steps = HealthService.shared.stepsRelay.value
-        let distance = HealthService.shared.distanceRelay.value
-        let calories = HealthService.shared.caloriesRelay.value
-        let clearCount = UserInfoService.shared.clearCount
-        let uuid = UserInfoService.shared.uuid
-        
-        let userData = Rank(nickName: nickName,
-                            steps: steps,
-                            distance: distance,
-                            calories: calories,
-                            clearCount: clearCount,
-                            region: selectedRegion,
-                            uuid: uuid)
-        
-        RankService.shared.uploadData(user: userData, completion: { [weak self] error in
+        RankService.shared.updateMyData(completion: { [weak self] error in
             guard let `self` = self else { return }
             if let error = error {
                 print(error)

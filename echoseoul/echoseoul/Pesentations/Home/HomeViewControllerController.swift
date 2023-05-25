@@ -70,11 +70,35 @@ class HomeViewControllerController: UIViewController {
         $0.isHidden = true
     }
     
+    lazy var updateButton = UIButton().then {
+        $0.titleLabel?.font = UIFont(name: "Cafe24-Ohsquareair", size: 12)
+        $0.setTitleColor(.darkGray, for: .normal)
+        $0.setTitle("정보 업데이트", for: .normal)
+        $0.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                self.blockRelay.accept(true)
+                self.updateMyData()
+            }).disposed(by: disposeBag)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupLayout()
         bind()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateMyData()
+    }
+    
+    private func updateMyData() {
+        RankService.shared.updateMyData(completion: { error in
+            if let error = error {
+                print(error)
+            }
+        })
     }
     
     private func setupLayout() {
@@ -83,6 +107,7 @@ class HomeViewControllerController: UIViewController {
                           healthView,
                           dateLabel,
                           monthDescriptionLabel,
+                          updateButton,
                           rankView,
                           regionSelectView,
                           blockView])
@@ -114,6 +139,12 @@ class HomeViewControllerController: UIViewController {
         monthDescriptionLabel.snp.makeConstraints {
             $0.top.equalTo(healthView.snp.bottom).offset(20)
             $0.leading.trailing.equalTo(regionButton)
+        }
+        
+        updateButton.snp.makeConstraints {
+            $0.size.equalTo(CGSize(width: 80, height: 20))
+            $0.trailing.equalTo(regionButton)
+            $0.centerY.equalTo(monthDescriptionLabel)
         }
         
         rankView.snp.makeConstraints {
