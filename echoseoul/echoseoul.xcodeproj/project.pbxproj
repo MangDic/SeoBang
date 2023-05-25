@@ -50,6 +50,7 @@
 		DAA2324B2A1D9F6400390E58 /* LeftInsetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2324A2A1D9F6400390E58 /* LeftInsetUI.swift */; };
 		DAA2324D2A1DACFA00390E58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA2324C2A1DACF900390E58 /* GoogleService-Info.plist */; };
 		DAA232502A1DADE400390E58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DAA2324F2A1DADE400390E58 /* FirebaseDatabase */; };
+		DAA232522A1EFBCA00390E58 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232512A1EFBCA00390E58 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		DAA232472A1D9A9C00390E58 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		DAA2324A2A1D9F6400390E58 /* LeftInsetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftInsetUI.swift; sourceTree = "<group>"; };
 		DAA2324C2A1DACF900390E58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DAA232512A1EFBCA00390E58 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DBBCA4BD4873E8139F2F9C10 /* Pods-echoseoulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-echoseoulTests.release.xcconfig"; path = "Target Support Files/Pods-echoseoulTests/Pods-echoseoulTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +252,7 @@
 				DA2DFE9A2A15B65000DF706D /* PlaceService.swift */,
 				DA2DFEB22A173BB000DF706D /* UserInfoService.swift */,
 				DAA232422A1C4C4F00390E58 /* RankService.swift */,
+				DAA232512A1EFBCA00390E58 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				DA2DFE402A14684D00DF706D /* AppDelegate.swift in Sources */,
 				DA2DFEAF2A17397000DF706D /* HealthDataView.swift in Sources */,
 				DA2DFEAD2A17391A00DF706D /* Rank.swift in Sources */,
+				DAA232522A1EFBCA00390E58 /* NetworkService.swift in Sources */,
 				DA2DFE822A148AB300DF706D /* StringExtensions.swift in Sources */,
 				DA2DFE8A2A14BC3A00DF706D /* RegionSelectView.swift in Sources */,
 				DA2DFE7B2A148A4C00DF706D /* AirInfoService.swift in Sources */,

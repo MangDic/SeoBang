@@ -23,8 +23,7 @@ class AirInfoService {
     
     private func loadData() {
         // API URL 생성
-        let userKey = "695948497572656d36344655456b62"
-        let urlString = "http://openAPI.seoul.go.kr:8088/\(userKey)/json/RealtimeCityAir/1/30/"
+        let urlString = "http://openAPI.seoul.go.kr:8088/\(NetworkService.seoul_api_key)/json/RealtimeCityAir/1/30/"
         let url = URL(string: urlString)!
         
         // URLSession을 사용한 네트워크 요청

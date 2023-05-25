@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupNMAP() {
-        NMFAuthManager.shared().clientId = "zhrd0ydi1m"
+        NMFAuthManager.shared().clientId = NetworkService.nmap_api_key
     }
 }
 

@@ -28,8 +28,7 @@ class PlaceService {
     }
     
     func loadData() {
-        let userKey = "695948497572656d36344655456b62"
-        let urlString = "http://openAPI.seoul.go.kr:8088/\(userKey)/json/culturalSpaceInfo/1/1000/"
+        let urlString = "http://openAPI.seoul.go.kr:8088/\(NetworkService.seoul_api_key)/json/culturalSpaceInfo/1/1000/"
         let url = URL(string: urlString)!
         
         // URLSession을 사용한 네트워크 요청
