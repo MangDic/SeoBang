@@ -48,9 +48,9 @@
 		DAA232452A1C4EB500390E58 /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232442A1C4EB500390E58 /* RankView.swift */; };
 		DAA232482A1D9A9C00390E58 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232472A1D9A9C00390E58 /* SetupViewController.swift */; };
 		DAA2324B2A1D9F6400390E58 /* LeftInsetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2324A2A1D9F6400390E58 /* LeftInsetUI.swift */; };
-		DAA2324D2A1DACFA00390E58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA2324C2A1DACF900390E58 /* GoogleService-Info.plist */; };
 		DAA232502A1DADE400390E58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DAA2324F2A1DADE400390E58 /* FirebaseDatabase */; };
 		DAA232522A1EFBCA00390E58 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232512A1EFBCA00390E58 /* NetworkService.swift */; };
+		DAA232562A203FF100390E58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA232552A203FF100390E58 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +118,8 @@
 		DAA232442A1C4EB500390E58 /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		DAA232472A1D9A9C00390E58 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		DAA2324A2A1D9F6400390E58 /* LeftInsetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftInsetUI.swift; sourceTree = "<group>"; };
-		DAA2324C2A1DACF900390E58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAA232512A1EFBCA00390E58 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DAA232552A203FF100390E58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DBBCA4BD4873E8139F2F9C10 /* Pods-echoseoulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-echoseoulTests.release.xcconfig"; path = "Target Support Files/Pods-echoseoulTests/Pods-echoseoulTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,7 +204,7 @@
 		DA2DFE3E2A14684D00DF706D /* echoseoul */ = {
 			isa = PBXGroup;
 			children = (
-				DAA2324C2A1DACF900390E58 /* GoogleService-Info.plist */,
+				DAA232552A203FF100390E58 /* GoogleService-Info.plist */,
 				DAA232492A1D9F5700390E58 /* Foundation */,
 				DA2DFE852A148E5F00DF706D /* echoseoul.entitlements */,
 				DA2DFE8E2A14C8FE00DF706D /* Pesentations */,
@@ -486,10 +486,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA232562A203FF100390E58 /* GoogleService-Info.plist in Resources */,
 				DA2DFE992A15AB1000DF706D /* Cafe24-Ohsquareair.ttf in Resources */,
 				DA2DFE4C2A14684F00DF706D /* LaunchScreen.storyboard in Resources */,
 				DA2DFE492A14684F00DF706D /* Assets.xcassets in Resources */,
-				DAA2324D2A1DACFA00390E58 /* GoogleService-Info.plist in Resources */,
 				DA2DFE972A15AADA00DF706D /* Cafe24Ohsquare.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,9 +814,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = echoseoul/echoseoul.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BPGXX3JG6H;
+				DEVELOPMENT_TEAM = L96BVXND6V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "echoseoul/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "서울 방방곡곡";
@@ -835,8 +836,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.echoseoul;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seobang.mangdic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -853,9 +855,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = echoseoul/echoseoul.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BPGXX3JG6H;
+				DEVELOPMENT_TEAM = L96BVXND6V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "echoseoul/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "서울 방방곡곡";
@@ -874,8 +877,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.echoseoul;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seobang.mangdic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
