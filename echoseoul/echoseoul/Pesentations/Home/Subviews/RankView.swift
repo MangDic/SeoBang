@@ -93,14 +93,14 @@ class RankView: UIView {
     }
     
     private func bind() {
-        RankService.shared.dataRelay
-            .filter { !$0.isEmpty }
-            .take(1)
-            .observe(on: MainScheduler.asyncInstance)
-            .subscribe(onNext: { [weak self] _ in
-                guard let `self` = self else { return }
-                self.selectRelay.accept(.region)
-            }).disposed(by: disposeBag)
+//        RankService.shared.dataRelay
+//            .filter { !$0.isEmpty }
+//            .take(1)
+//            .observe(on: MainScheduler.asyncInstance)
+//            .subscribe(onNext: { [weak self] _ in
+//                guard let `self` = self else { return }
+//                self.selectRelay.accept(.region)
+//            }).disposed(by: disposeBag)
         
         RankService.shared.dataRelay
             .asDriver(onErrorJustReturn: [])
@@ -131,7 +131,7 @@ class RankView: UIView {
         }).disposed(by: disposeBag)
     }
     
-    private func scrollToTop() {
+    func scrollToTop() {
         tableView.scrollToRow(at: IndexPath(row: 0, section: 0),
                               at: .top,
                               animated: false)

@@ -89,14 +89,16 @@ class HomeViewControllerController: UIViewController {
         bind()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        updateMyData()
-    }
-    
     private func updateMyData() {
-        RankService.shared.updateMyData(completion: { error in
+        RankService.shared.updateMyData(completion: { [weak self] error in
+            guard let `self` = self else { return }
             if let error = error {
                 print(error)
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.rankView.selectRelay.accept(.region)
+                    self.rankView.scrollToTop()
+                }
             }
         })
     }

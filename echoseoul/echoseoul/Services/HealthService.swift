@@ -92,6 +92,12 @@ class HealthService {
             self.healthDataRelay.accept([stepData,
                                          distanceData,
                                          caloriesData])
+            
+            RankService.shared.updateMyData(completion: { error in
+                if let error = error {
+                    print(error)
+                }
+            })
         }
     }
 

@@ -16,6 +16,7 @@ class RankService {
     let db = Database.database().reference()
     
     var disposeBag = DisposeBag()
+    let loadCompletedRelay = PublishRelay<Void>()
     let dataRelay = BehaviorRelay<[Rank]>(value: [])
     let selectRelay = BehaviorRelay<RankType>(value: .region)
     var regionArr = [Rank]()
@@ -100,6 +101,7 @@ class RankService {
                 self.setupIndividualData(arr: users)
                 
                 self.dataRelay.accept(self.regionArr)
+                self.loadCompletedRelay.accept(())
             }
         })
     }
@@ -114,12 +116,13 @@ class RankService {
             "distance": user.distance,
             "steps": user.steps
         ]
-        db.child("users").child(key).setValue(userData) { [weak self] (error, _) in
-            guard let `self` = self else { return }
+        db.child("users").child(key).setValue(userData) { (error, _) in
             if error == nil {
-                self.loadData()
+                completion(nil)
             }
-            completion(error)
+            else {
+                completion(error)
+            }
         }
     }
     
@@ -160,6 +163,7 @@ class RankService {
     }
     
     func updateMyData(completion: @escaping (Error?) -> Void ) {
+        print("내 데이터 업로드")
         let nickName = UserInfoService.shared.userNickName
         let region = UserInfoService.shared.region
         let steps = HealthService.shared.stepsRelay.value
@@ -167,7 +171,7 @@ class RankService {
         let calories = HealthService.shared.caloriesRelay.value
         let clearCount = UserInfoService.shared.clearCount
         let uuid = UserInfoService.shared.uuid
-        
+
         let userData = Rank(nickName: nickName,
                             steps: steps,
                             distance: distance,
@@ -175,12 +179,11 @@ class RankService {
                             clearCount: clearCount,
                             region: region,
                             uuid: uuid)
-        
+
         RankService.shared.uploadData(user: userData, completion: { error in
             if let error = error {
                 completion(error)
-            }
-            else {
+            } else {
                 RankService.shared.loadData()
                 completion(nil)
             }
