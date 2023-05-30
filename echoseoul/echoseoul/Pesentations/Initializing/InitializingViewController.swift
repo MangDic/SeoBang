@@ -1,8 +1,8 @@
 //
-//  SetupViewController.swift
+//  InitializingViewController.swift
 //  echoseoul
 //
-//  Created by 이명직 on 2023/05/24.
+//  Created by 이명직 on 2023/05/30.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ import RxCocoa
 import SnapKit
 import Then
 
-class SetupViewController: UIViewController {
+class InitializingViewController: UIViewController {
     var disposeBag = DisposeBag()
     
     let nickNameRelay = BehaviorRelay<String>(value: "")
@@ -88,8 +88,15 @@ class SetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presentPrivacyDescriptionViewController()
         setupLayout()
         bind()
+    }
+    
+    private func presentPrivacyDescriptionViewController() {
+        let vc = PrivacyDescriptionViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     private func setupLayout() {
@@ -184,3 +191,4 @@ class SetupViewController: UIViewController {
         regionSelectView.isHidden = true
     }
 }
+

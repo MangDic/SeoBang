@@ -22,10 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = UINavigationController()
         rootViewController.navigationBar.isHidden = true
         
-        var vc: UIViewController = MainTabBarController()
+        var vc: UIViewController!
         
         if UserInfoService.shared.userNickName == "Null" {
-            vc = SetupViewController()
+            vc = InitializingViewController()
+        }
+        else {
+            vc = MainTabBarController()
         }
         
         window.rootViewController = rootViewController

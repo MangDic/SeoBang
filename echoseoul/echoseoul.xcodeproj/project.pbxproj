@@ -46,11 +46,12 @@
 		DA2DFEB92A174B2300DF706D /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFEB82A174B2300DF706D /* PlaceDetailView.swift */; };
 		DAA232432A1C4C4F00390E58 /* RankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232422A1C4C4F00390E58 /* RankService.swift */; };
 		DAA232452A1C4EB500390E58 /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232442A1C4EB500390E58 /* RankView.swift */; };
-		DAA232482A1D9A9C00390E58 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232472A1D9A9C00390E58 /* SetupViewController.swift */; };
 		DAA2324B2A1D9F6400390E58 /* LeftInsetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2324A2A1D9F6400390E58 /* LeftInsetUI.swift */; };
 		DAA232502A1DADE400390E58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DAA2324F2A1DADE400390E58 /* FirebaseDatabase */; };
 		DAA232522A1EFBCA00390E58 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232512A1EFBCA00390E58 /* NetworkService.swift */; };
 		DAA232562A203FF100390E58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA232552A203FF100390E58 /* GoogleService-Info.plist */; };
+		DAA232602A2574E500390E58 /* PrivacyDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2325F2A2574E500390E58 /* PrivacyDescriptionViewController.swift */; };
+		DAA232622A257F7100390E58 /* InitializingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA232612A257F7100390E58 /* InitializingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,10 +117,11 @@
 		DA2DFEB82A174B2300DF706D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		DAA232422A1C4C4F00390E58 /* RankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankService.swift; sourceTree = "<group>"; };
 		DAA232442A1C4EB500390E58 /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
-		DAA232472A1D9A9C00390E58 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		DAA2324A2A1D9F6400390E58 /* LeftInsetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftInsetUI.swift; sourceTree = "<group>"; };
 		DAA232512A1EFBCA00390E58 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DAA232552A203FF100390E58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DAA2325F2A2574E500390E58 /* PrivacyDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyDescriptionViewController.swift; sourceTree = "<group>"; };
+		DAA232612A257F7100390E58 /* InitializingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializingViewController.swift; sourceTree = "<group>"; };
 		DBBCA4BD4873E8139F2F9C10 /* Pods-echoseoulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-echoseoulTests.release.xcconfig"; path = "Target Support Files/Pods-echoseoulTests/Pods-echoseoulTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,7 +284,7 @@
 		DA2DFE8E2A14C8FE00DF706D /* Pesentations */ = {
 			isa = PBXGroup;
 			children = (
-				DAA232462A1D9A8900390E58 /* Login */,
+				DAA232462A1D9A8900390E58 /* Initializing */,
 				DA2DFEA92A17368A00DF706D /* Home */,
 				DA2DFEAA2A17371600DF706D /* Map */,
 				DA2DFEA22A15F8DB00DF706D /* Cells */,
@@ -348,12 +350,13 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
-		DAA232462A1D9A8900390E58 /* Login */ = {
+		DAA232462A1D9A8900390E58 /* Initializing */ = {
 			isa = PBXGroup;
 			children = (
-				DAA232472A1D9A9C00390E58 /* SetupViewController.swift */,
+				DAA2325F2A2574E500390E58 /* PrivacyDescriptionViewController.swift */,
+				DAA232612A257F7100390E58 /* InitializingViewController.swift */,
 			);
-			path = Login;
+			path = Initializing;
 			sourceTree = "<group>";
 		};
 		DAA232492A1D9F5700390E58 /* Foundation */ = {
@@ -628,6 +631,7 @@
 				DA2DFE822A148AB300DF706D /* StringExtensions.swift in Sources */,
 				DA2DFE8A2A14BC3A00DF706D /* RegionSelectView.swift in Sources */,
 				DA2DFE7B2A148A4C00DF706D /* AirInfoService.swift in Sources */,
+				DAA232602A2574E500390E58 /* PrivacyDescriptionViewController.swift in Sources */,
 				DA2DFEA12A15F05700DF706D /* Place.swift in Sources */,
 				DAA232432A1C4C4F00390E58 /* RankService.swift in Sources */,
 				DA2DFEB32A173BB000DF706D /* UserInfoService.swift in Sources */,
@@ -635,6 +639,7 @@
 				DA2DFEB52A173CAC00DF706D /* Health.swift in Sources */,
 				DA2DFE9D2A15C17F00DF706D /* MapViewController.swift in Sources */,
 				DA2DFEB92A174B2300DF706D /* PlaceDetailView.swift in Sources */,
+				DAA232622A257F7100390E58 /* InitializingViewController.swift in Sources */,
 				DA2DFE7D2A148A7E00DF706D /* RegionAirInfo.swift in Sources */,
 				DA2DFE9B2A15B65000DF706D /* PlaceService.swift in Sources */,
 				DA2DFE9F2A15EBD200DF706D /* UIImageExtensions.swift in Sources */,
@@ -643,7 +648,6 @@
 				DA2DFE8C2A14C1C300DF706D /* UIViewExtensions.swift in Sources */,
 				DA2DFE842A148C3100DF706D /* HealthService.swift in Sources */,
 				DA2DFEA42A15F8EF00DF706D /* PlaceCell.swift in Sources */,
-				DAA232482A1D9A9C00390E58 /* SetupViewController.swift in Sources */,
 				DA2DFEB12A1739A200DF706D /* MyHealthCell.swift in Sources */,
 				DAA2324B2A1D9F6400390E58 /* LeftInsetUI.swift in Sources */,
 			);
@@ -821,10 +825,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "echoseoul/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "서울 방방곡곡";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "사용자의 건강 데이터에 접근합니다.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "사용자의 건강 데이터에 접근합니다.";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자 위치에 접근합니다.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치에 접근합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "건강앱과 통합하여 걸음수, 이동거리, 소모칼로리 정보를 사용자에게 제공하려고 합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "건강앱과 통합하여 걸음수, 이동거리, 소모칼로리 정보를 사용자에게 제공하려고 합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자 위치 정보를 사용하여 근처의 문화시설 정보를 제공하고자 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치 정보를 사용하여 근처의 문화시설 정보를 제공하고자 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -862,10 +866,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "echoseoul/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "서울 방방곡곡";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "사용자의 건강 데이터에 접근합니다.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "사용자의 건강 데이터에 접근합니다.";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자 위치에 접근합니다.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치에 접근합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "건강앱과 통합하여 걸음수, 이동거리, 소모칼로리 정보를 사용자에게 제공하려고 합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "건강앱과 통합하여 걸음수, 이동거리, 소모칼로리 정보를 사용자에게 제공하려고 합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자 위치 정보를 사용하여 근처의 문화시설 정보를 제공하고자 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치 정보를 사용하여 근처의 문화시설 정보를 제공하고자 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
