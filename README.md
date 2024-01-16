@@ -1,5 +1,6 @@
 # SeoBang
 [서울 방방곡곡] 서울 열린데이터 광장 데이터를 활용한 산책 장려 앱
+2023 서울 열린데이터광장 공공데이터 활용 모바일 앱/웹 경진대회 장려상 수상
 
 ## 사용기술
 - RxSwift, SnapKit, Realtime Database, NMap, HealthKit
